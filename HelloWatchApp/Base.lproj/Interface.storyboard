@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <label width="116.5" alignment="left" text="Label" id="EfT-Fq-YU8">
+                            <color key="textColor" red="0.98431372549999996" green="0.38823529410000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <button width="136" height="25.5" alignment="left" title="发送普通消息" id="Eqa-13-qeU">
+                            <color key="backgroundColor" red="0.98431372549999996" green="0.38823529410000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="sendMessageAction" destination="AgC-eL-Hgc" id="ADP-Ow-AFA"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="userInfo消息" id="G4a-e7-tU4">
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="userInfoAction" destination="AgC-eL-Hgc" id="VfQ-Oh-U5o"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="file消息" id="ase-6Y-9lw">
+                            <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="fileAction" destination="AgC-eL-Hgc" id="Hqo-Vl-gzW"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="content消息" id="981-uo-faR">
+                            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="contentAction" destination="AgC-eL-Hgc" id="K4b-6z-Zo9"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="pushGotoNext" id="hj6-Jt-fqw">
+                            <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="gotoNext" destination="AgC-eL-Hgc" id="QJi-qI-8j1"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="titleLabel" destination="EfT-Fq-YU8" id="QPy-R8-6Ae"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="110" y="319"/>
+        </scene>
+        <!--two-->
+        <scene sceneID="350-ha-Uzf">
+            <objects>
+                <controller identifier="TwoInterfaceController" title="two" hidesWhenLoading="NO" id="Fhi-cF-BJo" customClass="TwoInterfaceController">
+                    <items>
+                        <table alignment="left" id="hcM-C8-uVR">
+                            <items>
+                                <tableRow id="qz8-nu-DHR">
+                                    <group key="rootItem" width="1" alignment="left" backgroundImage="hongxin.png" id="kuG-WX-men">
+                                        <color key="backgroundColor" red="0.98431372549999996" green="0.38823529410000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                </tableRow>
+                                <tableRow id="Ajt-Sw-dzT">
+                                    <group key="rootItem" width="1" alignment="left" backgroundImage="hongxin.png" id="ee0-jU-mjS"/>
+                                </tableRow>
+                                <tableRow id="a59-Gh-6bP">
+                                    <group key="rootItem" width="1" alignment="left" backgroundImage="hongxin.png" id="Pnc-zF-HXE"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <color key="backgroundColor" red="0.28627450980000002" green="0.70196078429999997" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="mainTableView" destination="hcM-C8-uVR" id="se3-Kd-0HD"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="462" y="287"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="怎么收不到呢？" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1V-Q1-SkJ">
+                                <rect key="frame" x="70" y="19" width="230" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="5Mn-Io-BpB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHi-E1-GsR">
+                                <rect key="frame" x="62" y="292" width="167" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="客户端给iWatch发信息"/>
+                                <connections>
+                                    <action selector="sendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NiJ-kO-rkR"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LVO-jj-Gof">
+                                <rect key="frame" x="1" y="478" width="134" height="90"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6q-Cw-uJB">
+                                <rect key="frame" x="62" y="339" width="167" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="content消息"/>
+                                <connections>
+                                    <action selector="sendContentMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CgI-km-MjG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zw-od-ZZ5">
+                                <rect key="frame" x="62" y="390" width="167" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="userinfo消息"/>
+                                <connections>
+                                    <action selector="userInfoMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ba-Mi-PSV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2Z-bE-Giq">
+                                <rect key="frame" x="62" y="439" width="167" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="167" id="OBY-dy-96T"/>
+                                    <constraint firstAttribute="height" constant="30" id="Q1a-Jx-fiQ"/>
+                                </constraints>
+                                <state key="normal" title="file消息"/>
+                                <connections>
+                                    <action selector="fileMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ziB-jw-Q9G"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="消息:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXb-Hm-XiR">
+                                <rect key="frame" x="20" y="20" width="46" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="TXb-4t-hfL"/>
+                                    <constraint firstAttribute="width" constant="46" id="voG-Ff-5fg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8zw-od-ZZ5" firstAttribute="top" secondItem="w6q-Cw-uJB" secondAttribute="bottom" constant="21" id="1Yg-KY-PEQ"/>
+                            <constraint firstItem="hHi-E1-GsR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2j4-l2-aFV"/>
+                            <constraint firstItem="q2Z-bE-Giq" firstAttribute="height" secondItem="hHi-E1-GsR" secondAttribute="height" id="4dt-dY-0nX"/>
+                            <constraint firstItem="w6q-Cw-uJB" firstAttribute="width" secondItem="hHi-E1-GsR" secondAttribute="width" id="4oy-ZR-O2u"/>
+                            <constraint firstItem="8zw-od-ZZ5" firstAttribute="height" secondItem="hHi-E1-GsR" secondAttribute="height" id="8FQ-mi-Smi"/>
+                            <constraint firstItem="q2Z-bE-Giq" firstAttribute="width" secondItem="hHi-E1-GsR" secondAttribute="width" id="9LC-1b-2Nc"/>
+                            <constraint firstItem="E1V-Q1-SkJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="19" id="F4j-HC-PgE"/>
+                            <constraint firstItem="8zw-od-ZZ5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GGF-35-Pag"/>
+                            <constraint firstItem="qXb-Hm-XiR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="c8d-TC-RXV"/>
+                            <constraint firstItem="w6q-Cw-uJB" firstAttribute="height" secondItem="hHi-E1-GsR" secondAttribute="height" id="eEb-lt-Wfj"/>
+                            <constraint firstAttribute="trailing" secondItem="E1V-Q1-SkJ" secondAttribute="trailing" constant="20" id="eYf-Fw-qZ7"/>
+                            <constraint firstItem="w6q-Cw-uJB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jqX-tY-RtY"/>
+                            <constraint firstItem="E1V-Q1-SkJ" firstAttribute="leading" secondItem="qXb-Hm-XiR" secondAttribute="trailing" constant="8" id="mL4-Hc-705"/>
+                            <constraint firstItem="8zw-od-ZZ5" firstAttribute="width" secondItem="hHi-E1-GsR" secondAttribute="width" id="nle-5s-myx"/>
+                            <constraint firstItem="q2Z-bE-Giq" firstAttribute="top" secondItem="8zw-od-ZZ5" secondAttribute="bottom" constant="19" id="r7K-XP-w4O"/>
+                            <constraint firstItem="w6q-Cw-uJB" firstAttribute="top" secondItem="hHi-E1-GsR" secondAttribute="bottom" constant="17" id="t6u-7f-tSb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q2Z-bE-Giq" secondAttribute="bottom" constant="99" id="uwg-Uj-W48"/>
+                            <constraint firstItem="q2Z-bE-Giq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wnE-3L-5dC"/>
+                            <constraint firstItem="qXb-Hm-XiR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xdq-yQ-bQf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="defaultImageVIew" destination="LVO-jj-Gof" id="P4U-DC-jLX"/>
+                        <outlet property="reciveLabel" destination="E1V-Q1-SkJ" id="LcC-FI-aBG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37" y="239"/>
+        </scene>
+    </scenes>
+</document>
